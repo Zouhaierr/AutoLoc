@@ -6,17 +6,13 @@ import java.util.List;
 
 public interface IEmployeService {
 
-    Employe addEmploye(Employe employe, Long idAgence);
+    Employe addEmploye(Employe employe);
 
     List<Employe> getAllEmployes();
 
     Employe getEmployeById(Long idEmploye);
 
-    Employe updateEmploye(Long idEmploye, Employe employe);
+    Employe updateEmploye(Employe employe);
 
     void deleteEmploye(Long idEmploye);
-
-    Employe affecterEmployeToAgence(Long idEmploye, Long idAgence);
-
-    List<Employe> getEmployesByAgence(Long idAgence);
 }

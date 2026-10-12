@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface VehiculeRepository extends JpaRepository<Vehicule, Long> {
     List<Vehicule> findByAgence_IdAgence(Long idAgence);
+
+    boolean existsByImmatriculationAndIdVehiculeNot(String immatriculation, Long idVehicule);
 }

@@ -1,8 +1,9 @@
 package tn.esprit.autoloc.autolocapi.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import tn.esprit.autoloc.autolocapi.domain.Agence;
+import org.springframework.stereotype.Repository;
+import tn.esprit.autoloc.autolocapi.domain.Contrat;
 
-public interface ContratRepository extends JpaRepository<Agence, Long> {
-    boolean existsByReservation_IdReservation(Long idReservation);
+@Repository
+public interface ContratRepository extends JpaRepository<Contrat, Long> {
 }
