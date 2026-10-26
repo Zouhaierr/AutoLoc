@@ -15,4 +15,7 @@ public interface IContratService {
     Contrat updateContrat(Contrat contrat);
 
     void deleteContrat(Long idContrat);
+
+    void affecterContratAReservation(Long idContrat, Long idReservation);
+    void desaffecterContratDeReservation(Long idReservation);
 }

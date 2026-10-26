@@ -38,4 +38,9 @@ public class ReservationController {
     public void deleteReservation(@PathVariable Long id) {
         reservationService.deleteReservation(id);
     }
+
+    @PutMapping("/{idReservation}/client/{idClient}")
+    public void affecterClientAReservation(@PathVariable Long idReservation, @PathVariable Long idClient) {
+        reservationService.affecterClientAReservation(idClient, idReservation);
+    }
 }

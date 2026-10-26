@@ -38,4 +38,14 @@ public class ContratController {
     public void deleteContrat(@PathVariable Long id) {
         contratService.deleteContrat(id);
     }
+
+    @PutMapping("/{idContrat}/reservation/{idReservation}")
+    public void affecterContratAReservation(@PathVariable Long idContrat, @PathVariable Long idReservation) {
+        contratService.affecterContratAReservation(idContrat, idReservation);
+    }
+
+    @DeleteMapping("/reservation/{idReservation}")
+    public void desaffecterContratDeReservation(@PathVariable Long idReservation) {
+        contratService.desaffecterContratDeReservation(idReservation);
+    }
 }
